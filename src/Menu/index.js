@@ -17,7 +17,7 @@ export default function Mn({ navigation }) {
                     <Pressable style={styles.confButton} onPress={() => navigation.navigate('Comprar')}>
                         <Text style={styles.confText}>Comprar Passe</Text>
                     </Pressable>
-                    <Pressable style={styles.confButton} onPress={() => navigation.navigate('Horarios')}>
+                    <Pressable style={styles.confButton} onPress={() => navigation.navigate('Itinerarios')}>
                         <Text style={styles.confText}>Horários e Itinerários</Text>
                     </Pressable>
                     <Pressable style={styles.confButton} onPress={() => navigation.navigate('Mapa')}>
