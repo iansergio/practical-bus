@@ -23,6 +23,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         width: '100%'
     },
+    mapIframe: {
+        width: "100vw",
+        maxWidth: '300'
+    },
     logo1: {
         width: 300,
         height: 300,
@@ -34,7 +38,7 @@ const styles = StyleSheet.create({
     },
     mapa: {
         marginTop: 200,
-        width: 500,
+        maxWidth: 500,
         height: 600,
     },
     mapatitu: {

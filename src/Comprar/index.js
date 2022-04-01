@@ -28,7 +28,7 @@ export default function Cp() {
                 </View>
                 <View style={styles.botao}>
                     <TouchableOpacity style={styles.Comprar}>
-                        <Text style={styles.Comprar2}>comprar</Text>
+                        <Text style={styles.Comprar2}>Comprar</Text>
                     </TouchableOpacity>
                 </View>
             </ImageBackground>
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
     imageCar: {
         alignItems: 'center',
         justifyContent: 'center',
-
+        
     },
     logo: {
         alignItems: 'center',
@@ -73,15 +73,19 @@ const styles = StyleSheet.create({
         width: '50%',
         height: 42,
         borderRadius: 100,
+        
     },
     Comprar2: {
         color: 'white',
-        fontSize: 29,
-        textAlign: 'center'
+        fontSize: 25,
+        textAlign: 'center',
+        paddingTop: 5,
     },
     botao: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
+        paddingBottom: 30,
     },
     input: {
         height: 40,

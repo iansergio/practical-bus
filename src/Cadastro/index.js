@@ -1,4 +1,4 @@
-import React from 'react-native';
+import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ImageBackground } from 'react-native';
 
 export default function Cadastro() {
@@ -45,10 +45,12 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 1,
-        marginTop: '15%',
-        marginLeft: 47,
+        marginTop: '20%',
+        marginLeft: 37,
         width: 325,
         height: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     input: {
         width: '100%',
@@ -64,7 +66,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         width: '80%',
-        height: 60,
+        height: 50,
         marginTop: '10%',
         marginLeft: '10%',
         backgroundColor: '#FFFFFF',
@@ -73,19 +75,18 @@ const styles = StyleSheet.create({
     confText: {
         justifyContent: 'center',
         color: '#FFC300',
-        fontSize: 30,
+        fontSize: 25,
     },
     borda: {
         width: '80%',
         height: 500,
         borderColor: '#FFF',
         borderWidth: 3,
-        paddingTop: '5%',
-        paddingLeft: '5%',
-        paddingRight: '5%',
-        paddingBottom: '5%',
-        marginBottom: '100%',
-        marginTop: '%',
+        paddingTop: 40,
+        paddingLeft: 20,
+        paddingRight: 20,
+        paddingBottom: 20,
+        marginBottom: '20%',
         marginLeft: '10%',
         borderRadius: 20,
         backgroundColor: '#FFC300',

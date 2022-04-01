@@ -1,15 +1,12 @@
-import React from 'react-native';
+import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, ImageBackground, Image, Linking } from 'react-native';
 
-export default function Login() {
+export default function Login({ navigation }) {
     return (
         <View style={styles.container}>
-            <ImageBackground source={require('../assets/back.png')} resizeMode="cover" style={styles.image}>
+            <ImageBackground source={require('../../assets/background.png')} resizeMode="cover" style={styles.image}>
                 <View style={styles.centralizarImage}>
-                    <Image
-                        source={require('../assets/bus.png')}
-                        style={styles.logo}
-                    />
+                    <Image source={require('../../assets/logo.png')} style={styles.logo} />
                 </View>
                 <View style={styles.input2}>
                     <View style={styles.input3}>
@@ -30,9 +27,7 @@ export default function Login() {
                     </Text>
                     <Text
                         style={styles.link}
-                        onPress={() => {
-                            Linking.openURL('https://techup.co.in');
-                        }}>
+                        onPress={() => navigation.navigate('Cadastro')}>
                         CADASTRE-SE
                     </Text>
                 </View>
@@ -40,45 +35,44 @@ export default function Login() {
         </View>
     );
 }
+
 const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
         height: '100%',
-        backgroundImage: `url(${"Imagebk"})`
+
     },
     logo: {
-        marginTop: '15%',
+        marginTop: '12%',
         alignItems: 'center',
         justifyContent: 'center',
-
-        height: '200px',
-        width: '325px',
+        height: 200,
+        width: 325,
     },
     input: {
         width: '100%',
         height: 55,
         backgroundColor: '#F4F3F4',
         borderRadius: 21,
-        borderWidht: 1,
         borderColor: '#E0E0E0',
         marginBottom: 25,
         padding: 12,
         fontSize: 19,
-        fontFamily: '../assets/font/Cagliostro-Regular'
     },
     input2: {
         borderColor: '#0077B6',
         borderStyle: 'solid',
-        borderWidth: '3px',
-        width: '380px',
-        paddingTop: '10px',
-        paddingBottom: '30px',
-        paddingLeft: '20px',
-        paddingRight: '20px',
-        marginLeft: '16px',
-        marginBottom: '100px',
+        borderWidth: 3,
+        width: 362,
+        height: 380,
+        paddingTop: 10,
+        paddingBottom: 20,
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginLeft: 16,
+        marginBottom: 100,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -86,30 +80,30 @@ const styles = StyleSheet.create({
         },
         shadowOpacity: 0.25,
         shadowRadius: 3.84,
-
         elevation: 5,
-        borderRadius: '20px',
+        borderRadius: 20,
         backgroundColor: '#FFC300'
     },
 
     input3: {
-        marginTop: '100px',
+        marginTop: 20,
     },
     loginButton: {
-        marginTop: '100px',
+        marginTop: 80,
+        marginLeft: 30,
         backgroundColor: 'white',
-        width: '100%',
-        height: 42,
+        width: '80%',
+        height: 50,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 100,
+        borderRadius: 25,
     },
     loginText: {
         color: '#FFC300',
-        fontSize: 15,
+        fontSize: 20,
     },
     imagemFundo: {
-        flex: '1',
+        flex: 1,
         resizeMode: 'cover',
     },
     image: {
@@ -127,10 +121,11 @@ const styles = StyleSheet.create({
         flexDirection: 'row-reverse',
         justifyContent: 'space-evenly',
         color: '#FFFFFF',
+
     },
     link: {
         color: '#FFC300',
-        marginLeft: '10px'
+        marginLeft: 8
     },
 
 });
