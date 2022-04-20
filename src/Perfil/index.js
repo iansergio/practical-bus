@@ -4,6 +4,7 @@ import Axios from 'axios';
 import Constants from "expo-constants";
 
 import * as ImagePicker from 'expo-image-picker';
+import { auto } from "async";
 
 
 export default function Upload() {
@@ -46,6 +47,7 @@ export default function Upload() {
 
     return (
         <View style={styles.container}>
+            <View style={styles.borda}>
             <Image source={{
                 uri: avatar
                     ? avatar.uri
@@ -60,7 +62,7 @@ export default function Upload() {
             <TouchableOpacity style={styles.button} onPress={uploadImage}>
                 <Text>Enviar imagem </Text>
             </TouchableOpacity>
-
+            </View>
         </View>
 
     );
@@ -91,5 +93,14 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 50,
         marginBottom: 40,
+        margin:"auto",
+       
     },
+    borda: {
+        borderColor: '#FFC300',
+        borderStyle: 'solid',
+        borderWidth: 3,
+        padding: 80,
+        marginBottom:100,
+    }
 });

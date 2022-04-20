@@ -4,13 +4,16 @@ import { StyleSheet, View, ImageBackground, Image, TouchableOpacity, Text, TextI
 export default function Cp() {
     return (
         <View style={styles.container}>
+          
             <ImageBackground source={require('../../assets/backgroundmenu.png')} resizeMode="cover" style={styles.image}>
+            
                 <View style={styles.logo}>
                     <Image
                         source={require('../../assets/logo.png')}
                         style={styles.logo1}
                     />
                 </View>
+                <View style={styles.subir}>
                 <View style={styles.imageCar}>
                     <Image
                         source={require('../../assets/cartaoo.png')}
@@ -31,8 +34,10 @@ export default function Cp() {
                         <Text style={styles.Comprar2}>Comprar</Text>
                     </TouchableOpacity>
                 </View>
+                </View>
             </ImageBackground>
-        </View>
+            </View>
+       
     );
 }
 
@@ -42,7 +47,8 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
-        width: '100%'
+        width: '100%',
+   
     },
     image: {
         flex: 1,
@@ -106,6 +112,12 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
         textAlign: 'center'
+    },
+
+    subir:{
+        marginBottom:500,
     }
+
+
 
 });

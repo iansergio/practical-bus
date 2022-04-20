@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     borda: {
         width: '80%',
         height: 500,
-        borderColor: '#FFF',
+        borderColor: '#0077B6',
         borderWidth: 3,
         paddingTop: 40,
         paddingLeft: 20,
