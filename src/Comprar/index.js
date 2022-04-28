@@ -58,6 +58,7 @@ const styles = StyleSheet.create({
     cartao: {
         width: 300,
         height: 300,
+        marginTop:20
     },
     imageCar: {
         alignItems: 'center',
@@ -68,10 +69,12 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
 
+
     },
     logo1: {
         width: 300,
         height: 300,
+       
     },
     Comprar: {
         marginTop: 40,

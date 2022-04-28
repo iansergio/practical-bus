@@ -39,9 +39,8 @@ export default function Mp() {
                 bounces={false}
                 style={
                     {
-                        height: 500,
-                        width: 400,
-                        borderColor: "#CCC",
+                       borderWidth:10,
+                        borderColor: "red",
                         borderStyle: 'solid',
                         flex: 1
                     }
@@ -60,7 +59,7 @@ export default function Mp() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: '#0077B6',
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%'

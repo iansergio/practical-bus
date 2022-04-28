@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, StyleSheet, Image } from 'react-native';
 import Axios from 'axios';
 import Constants from "expo-constants";
 
+
 import * as ImagePicker from 'expo-image-picker';
 import { auto } from "async";
 
@@ -47,6 +48,7 @@ export default function Upload() {
 
     return (
         <View style={styles.container}>
+          
             <View style={styles.borda}>
             <Image source={{
                 uri: avatar
@@ -62,6 +64,7 @@ export default function Upload() {
             <TouchableOpacity style={styles.button} onPress={uploadImage}>
                 <Text>Enviar imagem </Text>
             </TouchableOpacity>
+    
             </View>
         </View>
 
@@ -93,8 +96,8 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 50,
         marginBottom: 40,
-        margin:"auto",
-       
+        marginLeft:"auto",
+        marginRight:"auto"
     },
     borda: {
         borderColor: '#FFC300',

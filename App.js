@@ -1,7 +1,7 @@
 import React from 'react'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, Text } from 'react-native';
+
 
 import Mn from './src/Menu/index.js';
 import Mp from './src/Mapa/index.js';
@@ -30,3 +30,5 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+
