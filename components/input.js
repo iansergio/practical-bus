@@ -1,20 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, TextInput } from "react-native";
 
 const Input = () => {
-  const [text, onChangeText] = React.useState("Horário chegada: 14:40");
-  const [number, onChangeNumber] = React.useState();
+  const [text, fOnChangeText] = useState("Horário chegada: 14:40");
+  const [number, fOnChangeNumber] = useState();
 
   return (
     <SafeAreaView>
       <TextInput
         style={styles.input}
-        onChangeText={onChangeText}
+        onChangeText={fOnChangeText}
         value={text}
       />
       <TextInput
         style={styles.input}
-        onChangeText={onChangeNumber}
+        onChangeText={fOnChangeNumber}
         value={number}
         placeholder="Horário saída: 14:45"
         keyboardType="numeric"

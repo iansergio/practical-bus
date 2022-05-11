@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { StyleSheet, View, ImageBackground, Image, TouchableOpacity, Text, TextInput } from 'react-native';
 
-export default function Cp() {
+export default function Cp({ navigation }) {
+
+    const [quant, setQuant] = useState('')
+    useEffect(() => {
+        console.log(quant);
+    }, [quant])
+
     return (
         <View style={styles.container}>
-          
+
             <ImageBackground source={require('../../assets/backgroundmenu.png')} resizeMode="cover" style={styles.image}>
-            
+
                 <View style={styles.logo}>
                     <Image
                         source={require('../../assets/logo.png')}
@@ -14,30 +20,39 @@ export default function Cp() {
                     />
                 </View>
                 <View style={styles.subir}>
-                <View style={styles.imageCar}>
-                    <Image
-                        source={require('../../assets/cartaoo.png')}
-                        style={styles.cartao}
-                    />
-                </View>
-                <Text style={styles.textReca}>Quantidade à recarregar</Text>
-                <View style={styles.input2}>
-                    <TextInput
-                        style={styles.input}
-                        keyboardType={('numeric')}
-                        placeholder="Recarregue aqui"
-                        
-                    />
-                </View>
-                <View style={styles.botao}>
-                    <TouchableOpacity style={styles.Comprar}>
-                        <Text style={styles.Comprar2}>Comprar</Text>
-                    </TouchableOpacity>
-                </View>
+                    <View style={styles.imageCar}>
+                        <Image
+                            source={require('../../assets/cartaoo.png')}
+                            style={styles.cartao}
+                        />
+                    </View>
+                    <Text style={styles.textReca}>Quantidade à recarregar</Text>
+                    <View style={styles.input2}>
+                        <TextInput
+                            style={styles.input}
+                            // keyboardType={('numeric')}
+                            placeholder="Recarregue aqui"
+                            // value='1'
+                            onChangeText={setQuant}
+
+                        />
+                    </View>
+                    <View style={styles.botao}>
+                        <TouchableOpacity style={styles.Comprar}>
+                            <Text style={styles.Comprar2}>Comprar</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate('Menu')}
+                            style={{ width: 120, height: 50, backgroundColor: "#FFC300", borderRadius: 25, padding: 7, marginLeft: "auto", marginRight: "auto", marginTop: 20 }}
+                        >
+                            <Text style={{ marginTop: 5, marginLeft: 20, fontSize: 20, color: "#FFFFFF" }}>Voltar</Text>
+                        </TouchableOpacity>
+                    </View>
                 </View>
             </ImageBackground>
-            </View>
-       
+        </View>
+
     );
 }
 
@@ -48,7 +63,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-   
+
     },
     image: {
         flex: 1,
@@ -58,12 +73,12 @@ const styles = StyleSheet.create({
     cartao: {
         width: 300,
         height: 300,
-        marginTop:20
+        marginTop: 20
     },
     imageCar: {
         alignItems: 'center',
         justifyContent: 'center',
-        
+
     },
     logo: {
         alignItems: 'center',
@@ -74,15 +89,15 @@ const styles = StyleSheet.create({
     logo1: {
         width: 300,
         height: 300,
-       
+
     },
     Comprar: {
-        marginTop: 40,
+        marginTop: 120,
         backgroundColor: '#FFC300',
         width: '50%',
         height: 42,
         borderRadius: 100,
-        
+
     },
     Comprar2: {
         color: 'white',
@@ -94,7 +109,8 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        paddingBottom: 30,
+
+
     },
     input: {
         height: 40,
@@ -117,8 +133,8 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
 
-    subir:{
-        marginBottom:500,
+    subir: {
+        marginTop: -120
     }
 
 

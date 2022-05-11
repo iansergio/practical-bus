@@ -1,4 +1,3 @@
-import { auto } from "async";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image, ImageBackground } from "react-native";
 
@@ -10,7 +9,7 @@ export default function Ct({ navigation }) {
       <View style={{ marginTop:70 }}>
         <Text style={{ color: "#FFC300", fontSize: 40, textAlign:"center",padding:30 }}>Cartão Practical</Text>
         <Text
-          style={{ color: "#FFC300", fontSize: 20, fontFamily: "sans-serif", textAlign:"center", padding:20 }}
+          style={{ color: "#FFC300", fontSize: 20, textAlign:"center", padding:20 }}
         >
           Aproxime o cartão do sensor
         </Text>

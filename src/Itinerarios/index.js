@@ -1,12 +1,11 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import Text1 from '../../components/box';
 import Input from '../../components/input';
-import Mais from '../../components/mais';
 import Input2 from '../../components/input2';
 
-export default function Iti() {
+export default function Iti({ navigation }) {
   return (
     <View style={styles.container}>
 
@@ -29,8 +28,16 @@ export default function Iti() {
       <Text1 />
       <Input />
 
+      <View>
 
-      <Mais></Mais>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Menu')}
+          style={{ width: 120, height: 50, backgroundColor: "#FFC300", borderRadius: 25, padding: 7, marginLeft: "auto", marginRight: "auto", marginTop: 2 }}
+        >
+          <Text style={{ marginTop: 5, marginLeft: 20, fontSize: 20, color: "#FFFFFF" }}>Voltar</Text>
+        </TouchableOpacity>
+      </View>
+
 
 
       <StatusBar style="auto" />
@@ -42,9 +49,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#0077B6',
-    //margin:5,
-    //alignItems: 'center',
-    //justifyContent: 'center',
   },
   fontTest: {
     color: 'yellow',

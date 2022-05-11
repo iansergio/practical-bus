@@ -44,13 +44,12 @@ const styles = StyleSheet.create({
         height: '100%',
     },
     logo: {
-        flex: 1,
-        marginTop: '20%',
-        marginLeft: 37,
-        width: 325,
+        marginTop: '12%',
+        margin:'auto',
+        marginLeft: 'auto',
+        marginRight:'auto',
         height: 200,
-        alignItems: 'center',
-        justifyContent: 'center',
+        width: 325,
     },
     input: {
         width: '100%',
